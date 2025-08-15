@@ -1,10 +1,150 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>crap portfolio</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
 
-  </body>
+    <main>
+        <section id="hero">
+            <h2>Welcome to My Portfolio</h2>
+            <p><strong>Hello! I'm a passionate web developer.</strong></p>
+            <p><a href="#projects">View My Projects →</a></p>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Brief description about yourself.</p>
+            <ul>
+                <li>Interest 1</li>
+                <li>Interest 2</li>
+                <li>Interest 3</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <article>
+                <h3>Project 1</h3>
+                <p>Project description.</p>
+                <p><strong>Technologies:</strong> Tech stack</p>
+                <p><a href="#">View Project</a> | <a href="#">Source Code</a></p>
+            </article>
+
+            <article>
+                <h3>Project 2</h3>
+                <p>Project description.</p>
+                <p><strong>Technologies:</strong> Tech stack</p>
+                <p><a href="#">View Project</a> | <a href="#">Source Code</a></p>
+            </article>
+
+            <article>
+                <h3>Project 3</h3>
+                <p>Project description.</p>
+                <p><strong>Technologies:</strong> Tech stack</p>
+                <p><a href="#">View Project</a> | <a href="#">Source Code</a></p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <h3>Frontend</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h3>Backend</h3>
+            <ul>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>PHP</li>
+            </ul>
+
+            <h3>Database</h3>
+            <ul>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <address>
+                <strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+                <strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a><br>
+                <strong>LinkedIn:</strong> <a href="#">LinkedIn Profile</a><br>
+                <strong>GitHub:</strong> <a href="#">GitHub Profile</a>
+            </address>
+
+            <form>
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+                </p>
+
+                <p>
+                    <input type="submit" value="Send Message">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2025 Your Name. All rights reserved.</small></p>
+    </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent!');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
 </html>
